@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTube</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/cafdf09f/img/favicon.ico" type="image/x-icon">
+</head>
+<body onload="homePage()">
+    <!-- --------------------------------------------Navbar------------------------------------------------- -->
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img class="menu-icon" src="./images/menu.png">
+            <img class="logo" src="./images/logo.jpg">
+        </div>
+        <input type="text" oninput="filterBySearch()" id="filter" placeholder="Search By Channel Id">
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input id="query" type="text" placeholder="Search">
+                <img onclick="search()" src="./images/search.png">
+            </div>
+            <img src="./images/voice-search.png" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="./images/upload.png">
+            <img src="./images/more.png">
+            <img src="./images/notification.png">
+            <img class="user-icon" src="./images/my.jpg">
+        </div>
+    </nav>
+
+    <!-- -------------------------------------------Side-Bar----------------------------------------------  -->
+
+    <div class="sidebar">
+        <div class="shortcut-links">
+            <a href="#"><img src="./images/home.png" ><p>Home</p></a>
+            <a href="#"><img src="./images/explore.png" ><p>Explore</p></a>
+            <a href="#"><img src="./images/subscriprion.png" ><p>Subscriprion</p></a>
+            <a href="#"><img src="./images/library.png" > <p>Library</p></a>
+            <a href="#"><img src="./images/history.png" > <p>History</p> </a>
+            <a href="#"><img src="./images/playlist.png" ><p>Playlist</p></a>
+            <a href="#"><img src="./images/messages.png" ><p>Message</p></a>
+            <a href="#"><img src="./images/show-more.png" ><p>Show More</p></a>
+            <hr>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------MAIN--------------------------------------------------- -->
+
+    <div class="container">
+        <div class="list-container">
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
+<script src="index.js"></script>

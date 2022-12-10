@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTube</title>
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/cafdf09f/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./play_video.css">
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img class="menu-icon" src="./images/menu.png">
+            <img onclick="indexPage()" class="logo" src="./images/logo.jpg">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input id="query" type="text" placeholder="Search">
+                <img onclick="search()" src="./images/search.png">
+            </div>
+            <img src="./images/voice-search.png" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="./images/upload.png">
+            <img src="./images/more.png">
+            <img src="./images/notification.png">
+            <img class="user-icon" src="./images/my.jpg">
+        </div>
+    </nav>
+
+    <!------------------------ Navbar done---------------------->
+    <div id="boxxx">
+        <iframe
+        width="100%" 
+        height="400" 
+        id="play_vid" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        ></iframe>
+    </div>
+</body>
+</html>
+<script>
+    let DataFromLs = JSON.parse(localStorage.getItem("data")) || [];
+    let id = DataFromLs.id.videoId;
+    let play_vid = document.getElementById("play_vid");
+    play_vid.src = `https://www.youtube.com/embed/${id}`
+
+    function indexPage(){
+        window.location.href = "index.html";
+    }
+</script>

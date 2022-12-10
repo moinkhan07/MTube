@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+img{
+    cursor: pointer;
+}
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+.nav-right .user-icon{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0;
+}
+.nav-left .menu-icon{
+    width: 22px;
+    margin-right: 25px;
+}
+.nav-left .logo{
+    width: 100px;
+}
+.nav-middle .mic-icon{
+    width: 16px;
+
+}
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 9px 12px;
+    border-radius: 4px;
+}
+.nav-middle .search-box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+.nav-middle .search-box img{
+    width: 15px;
+}
+body{
+    background-color: rgb(248, 248, 248);
+}
+
+/* Navbar css done */
+
+
+#boxxx{
+    width: 720px;
+    /* height: 380px; */
+     margin: 20px 0 0 100px; 
+  
+}
+@media (max-width : 900px){
+    #boxxx{
+        width: 95%;
+        /* height: 100px; */
+        margin: auto;
+    }
+    .nav-right img{
+        display: none;
+    }
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+    }
+    .nav-middle .search-box input{
+        width: 120px;
+    }
+    .nav-middle .mic-icon{
+        display: none;
+    }
+    .nav-left .logo{
+        width: 90px;
+    }
+}
